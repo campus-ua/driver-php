@@ -102,15 +102,16 @@ abstract class Command
 	}
 
 	/**
-	 * Throw an exception from handling the results
-	 *
-	 * @param string  $message
-	 * @param integer $code
-	 * @param array   $headers
-	 * @param array   $data
-	 * @throws Exception
-	 */
-	protected function throwException($message, $code, $headers, $data)
+  * Throw an exception from handling the results
+  *
+  * @param string  $message
+  * @param integer $code
+  * @param array   $headers
+  * @param array   $data
+  * @throws Exception
+  * @return never
+  */
+ protected function throwException($message, $code, $headers, $data)
 	{
 		$message = "{$message} [{$code}]:\nHeaders: " . print_r($headers, true) . "Body: " . print_r($data, true);
 		throw new Exception($message, $code, $headers, $data);

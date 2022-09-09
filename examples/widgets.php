@@ -100,12 +100,12 @@ if ($cmd == 'init') {
 			"RETURN store, count(*)";
 		$query = new Cypher\Query($client, $queryTemplate);
 		$result = $query->getResultSet();
-	
+
 		echo "Found ".count($result)." stores:\n";
 		foreach($result as $row) {
 			echo "* ".$row['store']->getProperty('name')."\n";
 		}
-	
+
 	// Use javascript traversal
 	} else {
 		$part = $partsIndex->findOne('name', $partName);
