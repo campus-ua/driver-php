@@ -15,7 +15,7 @@
     "phing/phing": "2.6.*",
     "phpunit/phpunit": "3.7.*",
     "squizlabs/php_codesniffer": "1.5.*",
-    "rector/rector": "^0.14.2"
+    "rector/rector": "^0.18.5"
   },
   "autoload": {
     "psr-0": {"Everyman\\Neo4j":"lib/"}

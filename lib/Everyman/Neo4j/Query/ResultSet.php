@@ -82,7 +82,7 @@ class ResultSet implements \Iterator, \Countable, \ArrayAccess
 		$this->position = 0;
 	}
 
-	public function current()
+	public function now()
 	{
 		return $this[$this->position];
 	}
