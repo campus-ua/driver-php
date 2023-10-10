@@ -80,6 +80,7 @@ class Row implements \Iterator, \Countable, \ArrayAccess
 
 
 	// Countable API
+	#[\ReturnTypeWillChange]
 	public function count()
 	{
 		return count($this->raw);
