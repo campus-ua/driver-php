@@ -33,7 +33,7 @@ class Row implements \Iterator, \Countable, \ArrayAccess
 	}
 
 	// ArrayAccess API
-
+	#[\ReturnTypeWillChange]
 	public function offsetExists($offset)
 	{
 		if (!is_integer($offset)) {
@@ -49,7 +49,7 @@ class Row implements \Iterator, \Countable, \ArrayAccess
 
 		return isset($this->raw[$offset]);
 	}
-
+	#[\ReturnTypeWillChange]
 	public function offsetGet($offset)
 	{
 		if (!is_integer($offset)) {
@@ -67,12 +67,12 @@ class Row implements \Iterator, \Countable, \ArrayAccess
 
 		return $this->data[$offset];
 	}
-
+	#[\ReturnTypeWillChange]
 	public function offsetSet($offset, $value)
 	{
 		throw new \BadMethodCallException("You cannot modify a result row.");
 	}
-
+	#[\ReturnTypeWillChange]
 	public function offsetUnset($offset)
 	{
 		throw new \BadMethodCallException("You cannot modify a result row.");

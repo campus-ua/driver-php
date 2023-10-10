@@ -42,12 +42,13 @@ class ResultSet implements \Iterator, \Countable, \ArrayAccess
 	}
 
 	// ArrayAccess API
-
+	#[\ReturnTypeWillChange]
 	public function offsetExists($offset)
 	{
 		return isset($this->data[$offset]);
 	}
-
+	
+	#[\ReturnTypeWillChange]
 	public function offsetGet($offset)
 	{
 		if (!isset($this->rows[$offset])) {
@@ -56,11 +57,13 @@ class ResultSet implements \Iterator, \Countable, \ArrayAccess
 		return $this->rows[$offset];
 	}
 
+	#[\ReturnTypeWillChange]
 	public function offsetSet($offset, $value)
 	{
 		throw new \BadMethodCallException("You cannot modify a query result.");
 	}
 
+	#[\ReturnTypeWillChange]
 	public function offsetUnset($offset)
 	{
 		throw new \BadMethodCallException("You cannot modify a query result.");
