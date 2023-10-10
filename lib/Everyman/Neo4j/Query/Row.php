@@ -88,27 +88,31 @@ class Row implements \Iterator, \Countable, \ArrayAccess
 
 
 	// Iterator API
-
+	#[\ReturnTypeWillChange]
 	public function rewind()
 	{
 		$this->position = 0;
 	}
+	
 	#[\ReturnTypeWillChange]
 	public function current()
 	{
 		return $this[$this->position];
 	}
 
+	#[\ReturnTypeWillChange]
 	public function key()
 	{
 		return $this->columns[$this->position];
 	}
 
+	#[\ReturnTypeWillChange]
 	public function next()
 	{
 		++$this->position;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function valid()
 	{
 		return $this->position < count($this->raw);

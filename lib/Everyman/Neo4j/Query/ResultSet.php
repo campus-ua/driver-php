@@ -68,7 +68,7 @@ class ResultSet implements \Iterator, \Countable, \ArrayAccess
 
 
 	// Countable API
-
+	
 	public function count()
 	{
 		return count($this->data);
@@ -76,7 +76,7 @@ class ResultSet implements \Iterator, \Countable, \ArrayAccess
 
 
 	// Iterator API
-
+	#[\ReturnTypeWillChange]
 	public function rewind()
 	{
 		$this->position = 0;
@@ -87,16 +87,19 @@ class ResultSet implements \Iterator, \Countable, \ArrayAccess
 		return $this[$this->position];
 	}
 
+	#[\ReturnTypeWillChange]
 	public function key()
 	{
 		return $this->position;
 	}
-
+	
+	#[\ReturnTypeWillChange]
 	public function next()
 	{
 		++$this->position;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function valid()
 	{
 		return isset($this->data[$this->position]);
