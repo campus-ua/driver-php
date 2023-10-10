@@ -93,7 +93,7 @@ class Row implements \Iterator, \Countable, \ArrayAccess
 	{
 		$this->position = 0;
 	}
-
+	#[\ReturnTypeWillChange]
 	public function current()
 	{
 		return $this[$this->position];
