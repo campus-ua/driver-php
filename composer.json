@@ -1,5 +1,5 @@
 {
-  "name": "everyman/neo4jphpdriver",
+  "name": "everyman/neo4jphp",
   "description": "Wrapper for the Neo4j graph database REST interface",
   "keywords": ["neo4j","graph","database"],
   "homepage": "http://github.com/jadell/neo4jphp/wiki",
